@@ -31,7 +31,7 @@ The designs were created to the following widths:
 ![](images/screenshot.png)
 
 ### Links
-- Live Site URL: [https://symphonious-nasturtium-35ed1c.netlify.app/](https://symphonious-nasturtium-35ed1c.netlify.app/)
+- Live Site URL: [https://silver-tartufo-22191b.netlify.app/](https://silver-tartufo-22191b.netlify.app/)
 
 ### Built with
 
