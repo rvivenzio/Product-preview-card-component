@@ -1,0 +1,207 @@
+:root {
+    
+    /* Tipografía */
+    --tipo-principal: 'Montserrat', sans-serif;
+    --tipo-secundaria: 'Fraunces', serif;
+    
+    /* Colors */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Tamaño */
+    --text: 1.4rem;
+    --title: 4rem;
+
+  }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    vertical-align: baseline;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 62.50%;
+  }
+
+  body {
+    font-family: var(--tipo-principal);
+    font-size: 1.4rem; 
+    background-color: var(--Cream); 
+}
+
+/* Principal */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Caja completa 
+dentro de Principal (Padre)*/
+section.card {
+    display: flex;
+    justify-content: center;
+    flex-basis:65rem; 
+    background-color: white;
+    border-radius: 1.5em;
+    overflow: hidden;
+    
+}
+
+ /* Primer Hijo
+ Imagen Izquierda*/
+article.card__image img {
+    max-width:30rem;
+    vertical-align: bottom; 
+    
+}
+
+/* Segundo hijo 
+Cuadro de texto */
+article.card__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding: 2rem;
+
+}
+
+
+/* Hijos de Segundo Hijo */
+/* Categoría */
+article.card__text .card__category {
+  font-size: var(--text);
+  color: var(--Dark-grayish-blue);
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  
+}
+
+/* Nombre Producto */
+article.card__text .card__title {
+  font-family: var(--tipo-secundaria);
+  font-size: var(--title);
+  font-weight:700;
+  line-height: 1;
+  margin: 0.4rem 0 0.4rem 0;
+  width: 96%;
+}
+
+/* Descripción del producto */
+article.card__text .card__description {
+  font-size: var(--text);
+  color: var(--Dark-grayish-blue);
+  width: 85%;
+}
+
+/* Contenedor de Precios */
+p.card_price {
+  display: flex;
+}
+
+.card_price--green {
+  font-family: var(--tipo-secundaria);
+  font-size: var(--title);
+  font-weight:700;
+  color: var(--Dark-cyan);
+  flex-basis: 60%;
+  
+}
+
+.card_price--grey {
+  align-self: center;
+  font-size: var(--text);
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+/* Fin Contenedor de Precios */
+
+
+/* Botón con Flex*/
+button.card__btn {
+  display: flex;
+	background-color: var(--Dark-cyan);
+  border-radius: 0.5rem;
+  padding: 1rem 0;
+  width: 80%;
+  color: var(--White);
+  font-size: var(--text);
+  font-weight: 700;
+  cursor: pointer;
+  align-self: center;
+  justify-content: center;
+	
+}
+
+/* Hijo del botón container  */
+span.btn__text {
+  margin-left: 1rem;
+}
+
+
+button.card__btn:hover {
+	background-color: hsl(156, 24%, 24%);
+}
+
+
+@media only screen and (max-width: 375px){
+  main{
+      max-height: fit-content;
+  }
+
+  section.card {
+    flex-direction: column;
+    flex-basis:70rem;
+    margin: 2rem;
+    
+  }
+
+  article.card__image img {
+    max-height:30rem;
+            
+}
+
+  article.card__image img {
+    min-width:100%;
+    height: 100%;
+	  object-fit:cover;
+}
+ 
+  article.card__text {
+    padding: 1rem;
+
+}
+
+article.card__text .card__title {
+  font-weight:500;
+  line-height: 0.8;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+button.card__btn {
+  display: flex;
+  margin: 1rem 0;
+	
+}
+}
+
+
+
+
+
+
+
